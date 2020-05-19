@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Catch-All</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/plugins.js"></script>
+
+    <!--select2 CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <!--selectize CSS-->
+    <link href="/stylesheets/selectize.default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+   
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/vendor.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/wiz.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <!-- Bootstrap CSS -->
+    
+
+    <!-- script
+    ================================================== -->
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/wiz.js"></script>
+    <script src="/js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="/js/main.js"></script>
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/logotf.png" alt="Homepage">
+            </a>
+        </div>
+
+
+    </header> <!-- end s-header -->
+
+    <!-- search results
+    ================================================== -->
+    <div class="container-fluid s-search">
+        <div class="intro-wrap" style="background-color: #fff;">
+                 <!-- end section-header -->
+                <div class="row card text-center">
+                    <div class="col-sm">
+                        <button  onclick="javascript:window.location.href='/'" style="line-height: normal" class="btn-block btn-primary mt-3 mb-1 next mt-4">Back</button>
+                    </div>
+                    <div class="col-sm">
+                        
+                        <!-- Multiselect dropdown -->
+                        <select id="growth" multiple class="demo-default" placeholder="Select a growth form">
+                            <option value="Shrub">Shrub</option>
+                            <option value="Succulent">Succulent</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Tree">Tree</option>
+                        </select>
+                    </div>
+                    <div class="col-sm ">
+                        
+                        <!-- Multiselect dropdown -->
+                        <select id="leafa" multiple class="demo-default" placeholder="Select arrangement">
+                            <option value="Basal">Basal</option>
+                            <option value="Whorled">Whorled</option>
+                            <option value="Alternate">Alternate</option>
+                            <option value="Opposite">Opposite</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        
+                        <!-- Multiselect dropdown -->
+                        <select id="leaff" multiple class="demo-default" placeholder="Select leaf form">
+                            <option value="Compound">Compound</option>
+                            <option value="Fern-like">Fern-like</option>
+                            <option value="Needle">Needle</option>
+                            <option value="Simple">Simple</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        
+                        <!-- Multiselect dropdown -->
+                        <button onclick="javascript:window.location.href='/db2?c1='+$('#growth').val()[0]+'&c2='+$('#growth').val()[1]+'&c3='+$('#growth').val()[2]+'&c4='+$('#growth').val()[3]+'&d1='+$('#leafa').val()[0]+'&d2='+$('#leafa').val()[1]+'&d3='+$('#leafa').val()[2]+'&d4='+$('#leafa').val()[3]+'&e1='+$('#leaff').val()[0]+'&e2='+$('#leaff').val()[1]+'&e3='+$('#leaff').val()[2]+'&e4='+$('#leaff').val()[3]" style="line-height: normal" class="btn-block btn-primary mt-3 mb-1 next mt-4">SEARCH</button>
+                    </div>
+                </div>
+            <div class="row section-header">
+                    <div class="col-full">
+                    <h2>Search Results</h2>
+                    </div>
+                </div>
+            <div class="container">
+                <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Common Name</th>
+      <th scope="col">Scientific Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Control Measures</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% results.forEach(function(r) { %>
+    <tr>
+      <th scope="row"><%= r.common_name %></th>
+      <td><%= r.scientific_name %></td>
+      <td><img class="icon icon1 fit-image" src="images/weeds/<%= r.common_name %>.jpg"></td>
+      <td><%= r.control_measures %></td>
+    </tr>
+<% }); %>
+      <tr>
+      <th scope="row">No more</th>
+      <td>No more</td>
+      <td>No more</td>
+      <td>No more</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+            <!-- end intro-wrap --> 
+        </div>
+    </div>
+    <!--Reference to jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--select2 JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <!--selectize JS-->
+    <script src="/js/selectize.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#reset").click(function (e) {
+                location.reload();
+            });
+
+            //selectize code
+            var state2 = $("#growth").selectize();
+            $("#div2 #fetchValue").click(function (e) {
+                alert($("#growth").val());
+            });
+            $("#div2 #setValue").click(function (e) {
+                var defValue = ["FL", "UT"];
+                var selectize = state2[0].selectize;
+                selectize.setValue(defValue);
+            });
+
+            //selectize code
+            var state2 = $("#leafa").selectize();
+            $("#div2 #fetchValue").click(function (e) {
+                alert($("#leafa").val());
+            });
+            $("#div2 #setValue").click(function (e) {
+                var defValue = ["FL", "UT"];
+                var selectize = state2[0].selectize;
+                selectize.setValue(defValue);
+            });
+
+            //selectize code
+            var state2 = $("#leaff").selectize();
+            $("#div2 #fetchValue").click(function (e) {
+                alert($("#leaff").val());
+            });
+            $("#div2 #setValue").click(function (e) {
+                var defValue = ["FL", "UT"];
+                var selectize = state2[0].selectize;
+                selectize.setValue(defValue);
+            });
+        });
+    </script>
+    <!-- end results -->
+
+
+     <!-- footer
+    ================================================== -->
+    <footer>
+
+        <p>© Copyright Catch-All 2020</p><!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+   </body>
+</html>
+

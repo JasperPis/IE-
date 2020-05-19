@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- CSS FILES START -->
+    <link href="/stylesheets/custom.css" rel="stylesheet">
+    <link href="/stylesheets/color.css" rel="stylesheet">
+    <link href="/stylesheets/responsive.css" rel="stylesheet">
+    <link href="/stylesheets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/prettyPhoto.css" rel="stylesheet">
+    <link href="/stylesheets/all.min.css" rel="stylesheet">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    <!-- CSS FILES End -->
+
+    <!--   JS Files Start  --> 
+    <script src="js/jquery-3.3.1.min.js"></script> 
+    <script src="js/jquery-migrate-1.4.1.min.js"></script> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/owl.carousel.min.js"></script> 
+    <script src="js/jquery.prettyPhoto.js"></script> 
+    <script src="js/isotope.min.js"></script> 
+    <script src="js/custom.js"></script>
+
+    <!-- Isotope -->
+    <script type="text/javascript" src="js/isotope.js"></script>
+    <script type="text/javascript" src="js/ini.isotope.js"></script>
+    
+
+    <style>
+        .nav-link:hover {
+            color: #ffc90e !important;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <title>CatchALL</title>
+  </head>
+   <!-- Nav Bar Start -->
+   <section class="top-bar animated-header">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="/weedID#foot">
+                        <img src="images/rad.png" alt="logo" width='60' height="60">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="northCen.html">North Central</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="weedID.html">Weed Identification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="losupp.html">Landowner Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>  
+</section>
+<!-- Nav Bar End -->
+<!-- page title -->
+<div class="container-fluid">
+    <div class="row" style="background-color: #fff">
+        <div class="col-1"></div>
+        <div class="col-2">
+            <div class="form-card">
+                        <h5 class="sub-heading">Select Growth Form</h5>
+                        <div class="row px-1 radio-group">
+                            <div class="card-block text-center radio selected" id="c1" value="0" onclick="javascript:document.getElementById('c1').setAttribute('value',document.getElementById('c1').getAttribute('value')+1)">
+                                <div class="image-icon"> <img class="icon icon1" src="images/wd/shrub.png"> </div>
+                                <p class="sub-desc">Shrub</p>
+                            
+                                </div>
+                            <div class="card-block text-center radio" id="c2" value="0" onclick="javascript:document.getElementById('c2').setAttribute('value',document.getElementById('c2').getAttribute('value')+1)">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/cac.png"> </div>
+                                <p class="sub-desc">Succulent</p>
+                            </div>
+                            <div class="card-block text-center radio">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/grass.png"> </div>
+                                <p class="sub-desc">Grass</p>
+                            </div>
+                            <div class="card-block text-center radio">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/tree.png"> </div>
+                                <p class="sub-desc">Tree</p>
+                            </div>
+        </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-2">
+            <div class="form-card">
+                        <h5 class="sub-heading">Select Leaf Arrangement</h5>
+                        <div class="row px-1 radio-group">
+                            <div class="card-block text-center radio selected" id="d1" value="0" onclick="javascript:document.getElementById('d1').setAttribute('value',document.getElementById('d1').getAttribute('value')+1)">
+                                <div class="image-icon"> <img class="icon icon1" src="images/wd/basal.png"> </div>
+                                <p class="sub-desc">Basal</p>
+                            </div>
+                            <div class="card-block text-center radio" id="d2" value="0" onclick="javascript:document.getElementById('d2').setAttribute('value',document.getElementById('d2').getAttribute('value')+1)">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/w.png"> </div>
+                                <p class="sub-desc">Whorled</p>
+                            </div>
+                            <div class="card-block text-center radio">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/alt.png"> </div>
+                                <p class="sub-desc">Alternate</p>
+                            </div>
+                            <div class="card-block text-center radio">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/opp.png"> </div>
+                                <p class="sub-desc">Opposite</p>
+                            </div>
+                </div></div></div>
+        <div class="col-1"></div>
+        <div class="col-2">
+            <div class="form-card">
+                        <h5 class="sub-heading">Select Leaf Form</h5>
+                        <div class="row px-1 radio-group">
+                            <div class="card-block text-center radio selected">
+                                <div class="image-icon"> <img class="icon icon1" src="images/wd/comp.png"> </div>
+                                <p class="sub-desc">Compound</p>
+                            </div>
+                            <div class="card-block text-center radio">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/fern.png"> </div>
+                                <p class="sub-desc">Fern-like</p>
+                            </div>
+                            <div class="card-block text-center radio">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/needle.png"> </div>
+                                <p class="sub-desc">Needle</p>
+                            </div>
+                            <div class="card-block text-center radio">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/simple.png"> </div>
+                                <p class="sub-desc">Simple</p>
+                            </div>
+        </div></div></div>
+        <div class="col-1"></div>
+        <div class="col-1">
+            <button onclick="javascript:window.location.href='/db?c1='+document.getElementById('c1').getAttribute('value')+'&c2='+document.getElementById('c2').getAttribute('value')+'&d1='+document.getElementById('d1').getAttribute('value')+'&d2='+document.getElementById('d2').getAttribute('value')" style="background-color:#ffc90e" class="text-center mt-3 mb-1 next mt-4">SEARCH</button> 
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>    
+<footer class="style-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <span class="copyright">Copyright &copy; <a style=color:#ffc90e href="index.html">Team RAD Trip</a></span>
+            </div>
+        </div>
+    </div>
+</footer>

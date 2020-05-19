@@ -1,181 +1,273 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html lang="en" class="no-js">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Home</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
-
-<!--Fonts-->
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
-
-<!--owl-carousel css-->
-<link rel="stylesheet" href="/stylesheets/owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="/stylesheets/owl-carousel/owl.theme.css">
-<link rel="stylesheet" href="/stylesheets/owl-carousel/owl.transitions.css">
-<!--        <link rel="stylesheet"  href="css/animations.css">-->
-<link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
-<link rel="stylesheet" href="/stylesheets/main.css">
-<link rel="stylesheet" href="/stylesheets/color1.css">
-
-<script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='https://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/vendor.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/wiz.css">
+	<link rel="stylesheet" href="/stylesheets/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="/stylesheets/style.css"> <!-- Resource style -->
+	<script src="/js/modernizr.js"></script> <!-- Modernizr -->
+  	<script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/main.js"></script>
+	<title>Catch-ALL</title>
+    <SCRIPT LANGUAGE="JavaScript">
+            function password() 
+            {
+                var testV = 1;
+                var pass1 = prompt('Enter password:','');
+                while (testV < 3) 
+                {
+                    if (!pass1)
+                    history.go(-1);
+                    if (pass1 == "groupe3") 
+                    {
+                        alert('Correct!');
+                        break;
+                    }
+                    testV+=1;
+                    var pass1 =
+                    prompt('Wrong password, enter again:');
+                }
+                if (pass1!="password" & testV ==3)
+                history.go(-1);
+                return " ";
+            }
+        document.write(password());
+</SCRIPT>
 </head>
-<body id="page-top" class="index">
+<body>
+    <header class="s-header">
 
-<!-- Preloader -->
-<div class="preloader"></div>
+        <div class="header-logo">
+            <a class="site-logo" href="/">
+                <img src="images/logotf.png" alt="Homepage">
+            </a>
+        </div>
 
-<!--[if lt IE 8]>
-	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
 
-<!-- Header -->
-<header id="home">
-	<!-- Navigation -->
-	<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header page-scroll">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-				</button>
-				<a style="display: none" class="navbar-brand page-scroll" href="#page-top"><img src="/images/logos/logo.png" alt=""></a>
-			</div>
+    </header> 
+<nav class="cd-vertical-nav">
+	<ul>
+		<li><a href="#section1" class="active"><span class="label">Intro</span></a></li>
+		<li><a href="#section2"><span class="label">North Central</span></a></li>
+		<li><a href="#section3"><span class="label">Weeds</span></a></li>
+		<li><a href="#section4"><span class="label">Grants</span></a></li>
+	</ul>
+</nav><!-- .cd-vertical-nav -->
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav text-center">
-					<li><a href="/">Home</a></li>
-					<li><a href="/native.ejs">North Central</a></li>
-					<li class="logo-holder">                        
-						<a href="/"><img src="images/logos/logo.png" alt=""></a>
-					</li>
-					<li><a href="/land.ejs">Landowner Support</a></li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-	<div class="layer1">
-		<div class="container">
-			<div id="main-banner" class="main-banner">
-				<div class="intro-text">
-					<div class="intro-heading"><h1>Catch-ALL<span>the information to make your catchment RAD</span></h1></div>
-					<span class="page-scroll btn btn-primary text-center">See More Below</span>
+<button class="cd-nav-trigger cd-image-replace">Open navigation<span aria-hidden="true"></span></button>
+
+<section id="section1" class="cd-section">
+	<div class="content-wrapper">
+            <h2 style="color: aliceblue">Catchment Protection made easy with</h2>
+            <h2 style="color: aliceblue;font-size: 4rem">Catch-ALL</h2>
+            <h2 style="color: aliceblue">information for North Central landowners</h2>
+		<a href="#section2" class="cd-scroll-down cd-image-replace">scroll down</a>
+	</div>
+</section><!-- cd-section -->
+
+<section id="section2" class="cd-section">
+    <div class="s-about">
+	<div class="row section-header has-bottom-sep" >
+            <div class="col-full">
+                <h3 class="subhead subhead--dark" style="font-size: 2.5rem">Hello There</h3>
+                <h1 class="display-1 display-1--light" style="font-size: 4rem">New to North Central</h1>
+            </div>
+        </div> <!-- end section-header -->
+        
+        <div class="row">
+            <p style="color: black">The management of the natural resources covering 30,000 kilometres in North Central is administered by the <a href="http://www.nccma.vic.gov.au">North Central Catchment Management Authority</a>. The NCCMA also manages the rural water allocations and protection of the Avoca, Campaspe and Loddon rivers that flow in this basin. This is done by following the principles outlined in the Regional Catchment Strategy (RCS) of North Central.</p>
+        </div> <!-- end about-desc -->
+
+         <!-- end about-stats -->
+ </div>
+</section><!-- cd-section -->
+
+<section id="section3" class="cd-section container">
+<div class="s-home">
+	<div class="content-wrapper">
+		<div class="card" style="background-color: #fff">
+			<h1 class="display-1 display-1--dark" style="font-size: 4rem">Weed Identification</h1>
+			<ul id="progressbar" class="text-center">
+				<li class="active step0" id="step1"></li>
+				<li class="step0" id="step2"></li>
+				<li class="step0" id="step3"></li>
+				<li class="step0" id="step4"></li>
+			</ul>
+			<fieldset class="show">
+				<div class="form-card">
+					<h5 class="sub-heading">Select Growth Form</h5>
+					<div class="row px-1 radio-group">
+						<div class="card-block text-center radio selected"  id="c1" value="0" onclick="javascript:document.getElementById('c1').setAttribute('value',document.getElementById('c1').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1" src="images/wd/shrub.png"> </div>
+							<p class="sub-desc">Shrub</p>
+						</div>
+						<div class="card-block text-center radio"  id="c2" value="0" onclick="javascript:document.getElementById('c2').setAttribute('value',document.getElementById('c2').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/cac.png"> </div>
+							<p class="sub-desc">Succulent</p>
+						</div>
+						<div class="card-block text-center radio"  id="c3" value="0" onclick="javascript:document.getElementById('c3').setAttribute('value',document.getElementById('c3').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/grass.png"> </div>
+							<p class="sub-desc">Grass</p>
+						</div>
+						<div class="card-block text-center radio"  id="c4" value="0" onclick="javascript:document.getElementById('c4').setAttribute('value',document.getElementById('c4').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/tree.png"> </div>
+							<p class="sub-desc">Tree</p>
+						</div>
+					</div> <button id="next1" style="background-color:#ffc90e" class="btn-block btn-primary mt-3 mb-1 next">NEXT<span class="fa fa-long-arrow-right"></span></button>
 				</div>
-			</div> 
-		</div>
-		<div class="banner-layer layer2"></div>
-		<div class="banner-layer layer3"></div>
-	</div> 
-
-</header>
-
-<!-- Services Section -->
-<section id="services">
-	<div class="container animatedParent">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2 class="section-heading">our Services</h2>
-			</div>
-		</div>
-		<div class="row text-center">
-			<div class="col-md-4 animated bounceInLeft slower">
-				<div class="circle"><img src="images/brand.png" alt="" /></div>
-				<h4 class="service-heading">North Central</h4>
-				<p class="text-muted">We provide up-to-date catchment information in North Central.</p>
-			</div>
-			<div class="col-md-4 animated bounceInDown slower">
-				<div class="circle"><img src="images/address.png" alt="" /></div>
-				<h4 class="service-heading">Landowner Support</h4>
-				<p class="text-muted">We provide different categories of grants for you to choose from including government grants, corporation grants and so on.</p>
-			</div>
-			<div class="col-md-4 animated bounceInRight slower">
-				<div class="circle"><img src="images/phone.png" alt="" /></div>
-				<h4 class="service-heading">To be continued</h4>
-				<p class="text-muted">More functions is on the way.</p>
-			</div>
+			</fieldset>
+			<fieldset>
+				<div class="form-card">
+					<h5 class="sub-heading">Select Leaf Arrangement</h5>
+					<div class="row px-1 radio-group">
+						<div class="card-block text-center radio selected"  id="d1" value="0" onclick="javascript:document.getElementById('d1').setAttribute('value',document.getElementById('d1').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1" src="images/wd/basal.png"> </div>
+							<p class="sub-desc">Basal</p>
+						</div>
+						<div class="card-block text-center radio" id="d2" value="0" onclick="javascript:document.getElementById('d2').setAttribute('value',document.getElementById('d2').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/w.png"> </div>
+							<p class="sub-desc">Whorled</p>
+						</div>
+						<div class="card-block text-center radio" id="d3" value="0" onclick="javascript:document.getElementById('d3').setAttribute('value',document.getElementById('d3').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/alt.png"> </div>
+							<p class="sub-desc">Alternate</p>
+						</div>
+						<div class="card-block text-center radio" id="d4" value="0" onclick="javascript:document.getElementById('d4').setAttribute('value',document.getElementById('d4').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/opp.png"> </div>
+							<p class="sub-desc">Opposite</p>
+						</div>
+					</div> <button id="next1" style="background-color:#ffc90e" class="btn-block btn-primary mt-3 mb-1 next" onclick=>NEXT<span class="fa fa-long-arrow-right"></span></button> <button class="btn-block btn-secondary mt-3 mb-1 prev"><span class="fa fa-long-arrow-left"></span>PREVIOUS</button>
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="form-card">
+					<h5 class="sub-heading">Select Leaf Form</h5>
+					<div class="row px-1 radio-group">
+						<div class="card-block text-center radio selected" id="e1" value="0" onclick="javascript:document.getElementById('e1').setAttribute('value',document.getElementById('e1').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1" src="images/wd/comp.png"> </div>
+							<p class="sub-desc">Compound</p>
+						</div>
+						<div class="card-block text-center radio" id="e2" value="0" onclick="javascript:document.getElementById('e2').setAttribute('value',document.getElementById('e2').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/fern.png"> </div>
+							<p class="sub-desc">Fern-like</p>
+						</div>
+						<div class="card-block text-center radio" id="e3" value="0" onclick="javascript:document.getElementById('e3').setAttribute('value',document.getElementById('e3').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/needle.png"> </div>
+							<p class="sub-desc">Needle</p>
+						</div>
+						<div class="card-block text-center radio" id="e4" value="0" onclick="javascript:document.getElementById('e4').setAttribute('value',document.getElementById('e4').getAttribute('value')+1)">
+							<div class="image-icon"> <img class="icon icon1 fit-image" src="images/wd/simple.png"> </div>
+							<p class="sub-desc">Simple</p>
+						</div>
+					</div> <button onclick="javascript:window.location.href='/db?c1='+document.getElementById('c1').getAttribute('value')+'&c2='+document.getElementById('c2').getAttribute('value')+'&c3='+document.getElementById('c3').getAttribute('value')+'&c4='+document.getElementById('c4').getAttribute('value')+'&d1='+document.getElementById('d1').getAttribute('value')+'&d2='+document.getElementById('d2').getAttribute('value')+'&d3='+document.getElementById('d3').getAttribute('value')+'&d4='+document.getElementById('d4').getAttribute('value')+'&e1='+document.getElementById('e1').getAttribute('value')+'&e2='+document.getElementById('e2').getAttribute('value')+'&e3='+document.getElementById('e3').getAttribute('value')+'&e4='+document.getElementById('e4').getAttribute('value')" style="background-color:#ffc90e" class="btn-block btn-primary mt-3 mb-1 next mt-4">SEARCH<span class="fa fa-long-arrow-right"></span></button> <button class="btn-block btn-secondary mt-3 mb-1 prev"><span class="fa fa-long-arrow-left"></span>PREVIOUS</button>
+				</div>
+			</fieldset>
 		</div>
 	</div>
-</section>
+</div>
+</section><!-- cd-section -->
 
-<section class="why-holder">
-	<div class="why-choose-us ">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<h2 class="section-heading">About Us</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid  bg-light-gray">
-		<div class="row">
-			<div class="col-md-6 picture-border">
-				<div class="row">
-					<img src="images/aboutus.jpeg" alt="">
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="why-right">
-					<div class="content-area">
-						<p class="sub-text">Catch-All acknowledges the Australian Aboriginal and Torres Strait Islander peoples as the first inhabitants of the nation and the traditional custodians of the lands where we live, learn and work.
-						<p>Catch-All would also like to pay respects to the Elders of the past and present and emerging for they hold the traditions, the culture and the hope of of Aboriginal and Torres Strait Islander peoples across the nation.</p>
-                        <p>
-                        Project Catch-All has been designed to serve as a hub to provide solutions to North Central’s major catchment management problems of noxious weed control to avoid landowners from paying hefty fines.</p>
-                        <p>Furthermore, it is intended for landowners along with the local community to find information about all the available grants to support their landcare and on-ground works that protect, enhance and restore the natural environment. </p>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<section id="section4" class="cd-section" style="background-color: gainsboro">
+<div class="s-clients">
+    <div class="row section-header">
+            <div class="col-full">
+                <h1 class="display-2">Grants</h1>
+            </div>
+        </div> 
+	<div class="content-wrapper">
+		<div class="isotope-item">
+            <!-- item 1 -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-horizontal">
+                                <div class="img-square-wrapper">
+                                    <img class="" src="images/epa.png" alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">EPA Community Funding Program</h4>
+                                    <p class="card-text">This ‘Inspiring Environmental Solutions Program’ invites Victorian communities to propose
+                                        fresh thinking and inspirational solutions to the important environment challenges we face.</p>                 
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">EPA Victoria T:03 9695 2722 E: ies@epa.vic.gov.au W: www.epa.vic.gov.au </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item 2 -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-horizontal">
+                                <div class="img-square-wrapper">
+                                    <img class="" src="images/cogb.jpg" alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Environmental
+                                        Sustainability
+                                        Community Grant</h4>
+                                    <p class="card-text">The program provides an opportunity for community groups and organisations to complete
+                                        projects that complement the areas of community strengthening that have been identified for
+                                        the City of Greater Bendigo community.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Customer help centre T:1300 304 541 Enquiries can be made by emailing E: foundation@bendigobank.com.au W: www.bendigobank.com.au/foundation</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <div class="card">
+                            <div class="card-horizontal">
+                                <div class="img-square-wrapper">
+                                    <img class="" src="images/cgs1.png" alt="Card image cap">
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Community Volunteers
+                                        Small Grants</h4>
+                                    <p class="card-text">Central Goldfields Victorian Volunteer Small Grants are an opportunity for not-for-profit
+                                        organisations. They play a very significant role in our community - “What occurs in our shire
+                                        relies heavily on volunteer support and we need to continue to support and embrace the efforts”
+                                        - Central Goldfields Shire website.</p>
+                                   
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Maria Rice Community Liaison Officer T:03 5349 1100 E: pyrenees@pyrenees.vic.gov.au W: www.pyrenees.vic.gov.au</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	   </div>
+    </div>
+</div>
+</section><!-- cd-section -->
+ <!-- Resource jQuery -->
+    <footer>
+            <p>
+                    © Copyright Catch-All 2020
+            </p><!-- end footer-bottom -->
 
-<footer id="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<span class="copyright"> <em>RAD TRIP.CO</em></span>
-			</div>
-		</div>
-	</div>
-</footer>
-
-
-
-<!-- jQuery -->
-<script src="/js/vendor/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/vendor/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="/js/vendor/jquery.easing.min.js"></script>
-
-<!-- Contact Form JavaScript -->
-<script src="/js/vendor/jqBootstrapValidation.js"></script>
-<script src="/js/vendor/contact_me.js"></script>
-<script src="/js/vendor/owl.carousel.min.js"></script>
-<script src="/js/vendor/prettify.js"></script>
-<script src="/js/vendor/css3-animate-it.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="/js/vendor/agency.min.js"></script>
-<script src="/js/vendor/jquery.mixitup.js"></script>
-<script src="/js/vendor/wow.min.js"></script>
-
-<script src="/js/main.js"></script>
-<script src="/js/script.js"></script>
-
+    </footer>
 </body>
 </html>
