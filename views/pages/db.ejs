@@ -18,33 +18,39 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/plugins.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
 
     <!--select2 CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <!--selectize CSS-->
-    <link href="/stylesheets/selectize.default.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-
-   
-
-    <!-- CSS
+   <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="/stylesheets/base.css">
-    <link rel="stylesheet" href="/stylesheets/vendor.css">
-    <link rel="stylesheet" href="/stylesheets/main.css">
-    <link rel="stylesheet" href="/stylesheets/wiz.css">
+    <link rel="stylesheet" href="css/wiz.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dis.css">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    
+    
+
     <!-- Bootstrap CSS -->
     
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.4.1/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- script
     ================================================== -->
-    <script src="/js/modernizr.js"></script>
-    <script src="/js/wiz.js"></script>
-    <script src="/js/pace.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/wiz.js"></script>
+    <script src="js/pace.min.js"></script>
+    
+
+    
 
     <!-- favicons
     ================================================== -->
@@ -52,7 +58,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </head>
 
@@ -63,7 +69,7 @@
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="index.html">
+            <a class="site-logo" href="/home">
                 <img src="images/logotf.png" alt="Homepage">
             </a>
         </div>
@@ -76,79 +82,86 @@
     <div class="container-fluid s-search">
         <div class="intro-wrap" style="background-color: #fff;">
                  <!-- end section-header -->
-                <div class="row card text-center">
+                <div class="row row-cols-5 card text-center" style="padding: 3rem; padding-top:4rem;">
                     <div class="col-sm">
-                        <button  onclick="javascript:window.location.href='/'" style="line-height: normal" class="btn-block btn-primary mt-3 mb-1 next mt-4">Back</button>
+                        <button style="height:7rem" onclick="javascript:window.location.href='/home#weedid'" style="line-height: normal" class="btn-block btn-primary mt-3 mb-1 next mt-4">Back</button>
                     </div>
                     <div class="col-sm">
                         
                         <!-- Multiselect dropdown -->
-                        <select id="growth" multiple class="demo-default" placeholder="Select a growth form">
-                            <option value="Shrub">Shrub</option>
-                            <option value="Succulent">Succulent</option>
-                            <option value="Grass">Grass</option>
-                            <option value="Tree">Tree</option>
-                        </select>
-                    </div>
-                    <div class="col-sm ">
-                        
-                        <!-- Multiselect dropdown -->
-                        <select id="leafa" multiple class="demo-default" placeholder="Select arrangement">
-                            <option value="Basal">Basal</option>
-                            <option value="Whorled">Whorled</option>
-                            <option value="Alternate">Alternate</option>
-                            <option value="Opposite">Opposite</option>
+                        <label class="select-label">Growth Form(5)</label>
+                        <select id="growth" multiple class="js-example-basic-multiple" placeholder="Select a growth form">
+                            <option value="Shrub" <%= c1s %>>Shrub</option>
+                            <option value="Herb" <%= c2s %>>Herb</option>
+                            <option value="Grass" <%= c3s %>>Grass</option>
+                            <option value="Tree" <%= c4s %>>Tree</option>
+                            <option value="Aquatic" <%= c5s %>>Aquatic</option>
                         </select>
                     </div>
                     <div class="col-sm">
                         
                         <!-- Multiselect dropdown -->
-                        <select id="leaff" multiple class="demo-default" placeholder="Select leaf form">
-                            <option value="Compound">Compound</option>
-                            <option value="Fern-like">Fern-like</option>
-                            <option value="Needle">Needle</option>
-                            <option value="Simple">Simple</option>
+                        <label class="select-label">Leaf Arrangement(4)</label>
+                        <select id="leafa" multiple class="js-example-basic-multiple" placeholder="Select a leaf arrangement">
+                            <option value="Basal" <%= d1s %>>Basal</option>
+                            <option value="Whorled" <%= d2s %>>Whorled</option>
+                            <option value="Alternate" <%= d3s %>>Alternate</option>
+                            <option value="Opposite" <%= d4s %>>Opposite</option>
                         </select>
                     </div>
                     <div class="col-sm">
                         
                         <!-- Multiselect dropdown -->
-                        <button onclick="javascript:window.location.href='/db2?c1='+$('#growth').val()[0]+'&c2='+$('#growth').val()[1]+'&c3='+$('#growth').val()[2]+'&c4='+$('#growth').val()[3]+'&d1='+$('#leafa').val()[0]+'&d2='+$('#leafa').val()[1]+'&d3='+$('#leafa').val()[2]+'&d4='+$('#leafa').val()[3]+'&e1='+$('#leaff').val()[0]+'&e2='+$('#leaff').val()[1]+'&e3='+$('#leaff').val()[2]+'&e4='+$('#leaff').val()[3]" style="line-height: normal" class="btn-block btn-primary mt-3 mb-1 next mt-4">SEARCH</button>
+                        <label class="select-label">Leaf Form/Shape(2)</label>
+                        <select id="leaff" multiple class="js-example-basic-multiple" placeholder="Select a leaf form">
+                            <option value="Compound" <%= e1s %>>Compound</option>
+                            <option value="Simple" <%= e2s %>>Simple</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        
+                        <!-- Multiselect dropdown -->
+                        <button style="height:7rem" 
+                        onclick="javascript:window.location.href='/db2?c1='+$('#growth').val()[0]+'&c2='+$('#growth').val()[1]+'&c3='+$('#growth').val()[2]+'&c4='+$('#growth').val()[3]+'&c5='+$('#growth').val()[4]+'&d1='+$('#leafa').val()[0]+'&d2='+$('#leafa').val()[1]+'&d3='+$('#leafa').val()[2]+'&d4='+$('#leafa').val()[3]+'&e1='+$('#leaff').val()[0]+'&e2='+$('#leaff').val()[1]" style="line-height: normal" class="btn-block btn-primary mt-3 mb-1 next mt-4">SEARCH</button>
                     </div>
                 </div>
-            <div class="row section-header">
-                    <div class="col-full">
-                    <h2>Search Results</h2>
+                <div class="row text-center" style="margin-top:3rem">
+                    <p class="sub-desc" style="font-size:5rem;"><%= num %> Results</p>
+                </div>
+                <% results.forEach(function(r) { %>
+                <div class="row">
+                    <div class="card text-center w-100">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="image-icon"> <img class="icon icon1 fit-image" src="images-db/weeds/<%= r.common_name %>.jpg"> </div>
+                            </div>
+                            <div class="col-sm text-left">
+                                <p class="sub-desc"><span style="font-weight:bold;">Name: </span> <%= r.common_name %></p>
+                                <p class="sub-desc"><span style="font-weight:bold;">Scientific Name: </span></p>
+                                <p class="sub-desc"><%= r.scientific_name %></p>
+                                
+                            </div>
+                            <div class="col-sm text-left">
+                                <p class="sub-desc"><span style="font-weight:bold;">Growth Form: </span><%= r.growth_form %></p>
+                                <p class="sub-desc"><span style="font-weight:bold;">Leaf Arrangment: </span><%= r.leaf_arrangement %></p>
+                                <p class="sub-desc"><span style="font-weight:bold;">Leaf Form: </span><%= r.leaf_form %></p>
+                            </div>
+                            <div class="col-sm text-left">
+                                <p class="sub-desc"><span style="font-weight:bold;">A Weed Of National Significance: </span></p>
+                                <p class="sub-desc"><%= r.wons %></p>
+                                <p class="sub-desc"><span style="font-weight:bold;">Regulation type: </span></p>
+                                <p class="sub-desc"><%= r.regulation_type %></p>
+                            </div>
+                            <div class="col-sm text-left">
+                                
+                            </div>
+                        </div>            
+                        <div class="card card-body"><h6>Control Measures</h6>
+                            <%= r.control_measures %>
+                        </div>
                     </div>
                 </div>
-            <div class="container">
-                <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Common Name</th>
-      <th scope="col">Scientific Name</th>
-      <th scope="col">Image</th>
-      <th scope="col">Control Measures</th>
-    </tr>
-  </thead>
-  <tbody>
-      <% results.forEach(function(r) { %>
-    <tr>
-      <th scope="row"><%= r.common_name %></th>
-      <td><%= r.scientific_name %></td>
-      <td><img class="icon icon1 fit-image" src="images/weeds/<%= r.common_name %>.jpg"></td>
-      <td><%= r.control_measures %></td>
-    </tr>
-<% }); %>
-      <tr>
-      <th scope="row">No more</th>
-      <td>No more</td>
-      <td>No more</td>
-      <td>No more</td>
-    </tr>
-  </tbody>
-</table>
-            </div>
+                <% }); %>
             <!-- end intro-wrap --> 
         </div>
     </div>
@@ -156,58 +169,69 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!--select2 JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <!--selectize JS-->
-    <script src="/js/selectize.js"></script>
     <script>
         $(document).ready(function () {
             $("#reset").click(function (e) {
                 location.reload();
             });
 
-            //selectize code
-            var state2 = $("#growth").selectize();
-            $("#div2 #fetchValue").click(function (e) {
-                alert($("#growth").val());
+            //select2 code
+            $('.js-example-basic-multiple').select2();
+            $("#div1 #fetchValue").click(function (e) {
+                alert($("#state1").val());
             });
-            $("#div2 #setValue").click(function (e) {
-                var defValue = ["FL", "UT"];
-                var selectize = state2[0].selectize;
-                selectize.setValue(defValue);
-            });
-
-            //selectize code
-            var state2 = $("#leafa").selectize();
-            $("#div2 #fetchValue").click(function (e) {
-                alert($("#leafa").val());
-            });
-            $("#div2 #setValue").click(function (e) {
-                var defValue = ["FL", "UT"];
-                var selectize = state2[0].selectize;
-                selectize.setValue(defValue);
-            });
-
-            //selectize code
-            var state2 = $("#leaff").selectize();
-            $("#div2 #fetchValue").click(function (e) {
-                alert($("#leaff").val());
-            });
-            $("#div2 #setValue").click(function (e) {
-                var defValue = ["FL", "UT"];
-                var selectize = state2[0].selectize;
-                selectize.setValue(defValue);
+            $("#div1 #setValue").click(function (e) {
+                $("#state1").val(["FL", "UT"]).trigger("change");
             });
         });
     </script>
+
     <!-- end results -->
 
 
      <!-- footer
     ================================================== -->
-    <footer>
-<p>Weeds data is retrieved from <a href="http://www.nccma.vic.gov.au/sites/default/files/publications/weeds_identification_guide.pdf">North Central Catchment Management Authority</a></p>
-        <p>© Copyright Catch-All 2020</p><!-- end footer-bottom -->
+     <footer>
+        <div class="row footer-main">
+            <div  class="footer-logo"></div>
+            <div class="footer-desc">
 
-    </footer> <!-- end footer -->
-   </body>
+            </div>
+
+            
+
+        </div> <!-- end footer-main -->
+
+        <div class="col-twelve">
+            <div class="copyright">
+                <span>© Copyright Catch-All 2020</span> 
+                    
+            </div>
+        </div>
+
+        <a href="#modalstem" role="button" data-toggle="modal">Disclaimer</a>
+                        <!-- Scrollable Modal HTML -->
+                        <div id="modalstem" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title">Disclaimer</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color: black; text-align: left;">
+                                            The information contained on this website is for reference purposes only. RAD Trip Co. has taken reasonable steps to verify the legitimacy of the same.<br><br> 
+                                            The Weed-Catch tool is supported by the information provided by the North Central CMA’s Weed Identification Guide. The website also has links to other sites and the information provided on these external sites is not under the control of RAD Trip Co.<br><br>
+                                            RAD Trip Co. expects that all the users that access this website take the responsibility for accessing the accuracy, reliability and currency of the content.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end footer-bottom -->
+
+    </footer> 
+</body>
 </html>
 
