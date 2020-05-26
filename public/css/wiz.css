@@ -76,7 +76,7 @@
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: #ffc90e
+  background: #bc6c25
 }
 
 .sub-heading {
@@ -84,7 +84,7 @@
 }
 
 .yellow-text {
-  color: #ffc90e
+  color: #bc6c25
 }
 
 fieldset.show {
@@ -114,9 +114,9 @@ fieldset {
 }
 
 .radio.selected {
-  border: 1px solid #ffc90e;
+  border: 1px solid #bc6c25;
   box-shadow: 0px 8px 16px 0px #EEEEEE;
-  color: #ffc90e;
+  color: #bc6c25;
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
   -o-filter: grayscale(0%);
