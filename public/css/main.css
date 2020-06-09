@@ -555,6 +555,8 @@ button, .btn {
 
 fieldset {
     margin-bottom: 1.5rem;
+    padding: inherit;
+    padding-block-start: 0.35em;
 }
 
 input,
@@ -1400,7 +1402,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .section-header.has-bottom-sep {
-    padding-bottom: 2.1rem;
+    
     position: relative;
 }
 
@@ -1833,7 +1835,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 100%;
     height: 100%;
     min-height: 786px;
-    background-color: #283618;
+    background-color: transparent;
     position: relative;
     display: table;
 }
@@ -1874,7 +1876,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 100%;
     height: 100%;
     vertical-align: middle;
-    padding-bottom: 15.6rem;
+    padding-bottom: 10 rem;
     position: relative;
     overflow: hidden;
 }
@@ -1900,7 +1902,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__main {
-    padding-top: 24rem;
+    padding-top: 12rem;
     position: relative;
 }
 
@@ -2287,8 +2289,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-about {
-    padding-top: 16.2rem;
-    padding-bottom: 9rem;
+    padding: 6rem 0 6rem;
     background-color: #dda15e;
     color: #010507;
     position: relative;
@@ -2457,8 +2458,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-services {
-    padding-top: 16.2rem;
-    padding-bottom: 13.2rem;
+    padding: 6rem 0 6rem;
     background-color: #283618;
     color: #fff;
     position: relative;
@@ -2595,19 +2595,19 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-works {
     background: #dda15e;
-    padding: 0 0 15rem 0;
+    padding: 0 0 10rem 0;
     min-height: 800px;
     position: relative;
 }
 
 .s-works .intro-wrap {
-    padding: 15rem 0 25.2rem;
+    padding: 6rem 0 0rem;
     background: #dda15e;
 }
 
 .works-content {
     max-width: 1160px;
-    margin-top: -23.4rem;
+    
 }
 
 
@@ -3072,8 +3072,7 @@ html.no-csstransitions .home-content__main {
     background-color: #283618;
     background-repeat: no-repeat;
     background-position: center, center;
-    padding-top: 15rem;
-    padding-bottom: 12rem;
+    padding: 6rem 0 6rem;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
 }
@@ -4651,3 +4650,7 @@ no-js
 
 
 /* */
+
+
+
+

@@ -130,39 +130,45 @@
                 </div>
                 <% results.forEach(function(r) { %>
                 <div class="row">
-                    <div class="card text-center w-100">
+                    <div class="card text-center w-100" style="padding-bottom:1rem;">
                         <div class="row">
                             <div class="col-sm">
                                 <div class="image-icon"> <img class="icon icon1 fit-image" src="images-db/weeds/<%= r.common_name %>.jpg"> </div>
                             </div>
                             <div class="col-sm text-left">
-                                <p class="sub-desc"><span style="font-weight:bold;">Name: </span> <%= r.common_name %></p>
-                                <p class="sub-desc"><span style="font-weight:bold;">Scientific Name: </span></p>
-                                <p class="sub-desc"><%= r.scientific_name %></p>
+                                <p class="sub-desc"><span style="font-weight:bold;">Name: </span></p>
+                                <p class="sub-desc"><%= r.common_name %></p>
                                 
                             </div>
                             <div class="col-sm text-left">
-                                <p class="sub-desc"><span style="font-weight:bold;">Growth Form: </span><%= r.growth_form %></p>
-                                <p class="sub-desc"><span style="font-weight:bold;">Leaf Arrangment: </span><%= r.leaf_arrangement %></p>
-                                <p class="sub-desc"><span style="font-weight:bold;">Leaf Form: </span><%= r.leaf_form %></p>
+                                <p class="sub-desc"><span style="font-weight:bold;">Leaf Arrangment: </span></p>
+                                <p class="sub-desc"><%= r.leaf_arrangement %></p>
+                                <p class="sub-desc"><span style="font-weight:bold;">Leaf Form: </span></p>
+                                <p class="sub-desc"><%= r.leaf_form %></p>
                             </div>
                             <div class="col-sm text-left">
-                                <p class="sub-desc"><span style="font-weight:bold;">A Weed Of National Significance: </span></p>
-                                <p class="sub-desc"><%= r.wons %></p>
+                                <p class="sub-desc"><span style="font-weight:bold;">Growth Form: </span></p>
+                                <p class="sub-desc"><%= r.growth_form %></p>
                                 <p class="sub-desc"><span style="font-weight:bold;">Regulation type: </span></p>
                                 <p class="sub-desc"><%= r.regulation_type %></p>
                             </div>
                             <div class="col-sm text-left">
-                                
+                                 <p class="sub-desc"><span style="font-weight:bold;">National Significance: </span></p>
+                                <p class="sub-desc text-center"><%= r.wons %>!</p>
                             </div>
                         </div>            
                         <div class="card card-body"><h6>Control Measures</h6>
                             <%= r.control_measures %>
                         </div>
+                        <div style="margin-top:3rem;"><p>Picture is from:<%= r.copyright %></p></div>
+                        
                     </div>
                 </div>
                 <% }); %>
             <!-- end intro-wrap --> 
+            <div class="row text-center" style="margin-top:4rem;margin-bottom:2rem;">
+                <p class="select-label" style="font-size:2.5rem;">If you need more information weeds, please visit <a href="https://www.weeds.org.au" style="color:black">this website</a>.</p>
+            </div>
         </div>
     </div>
     <!--Reference to jQuery-->
@@ -205,8 +211,8 @@
                     
             </div>
         </div>
-         
-        <a href="#modalstem" role="button" data-toggle="modal">Disclaimer</a>
+        <div style="margin-bottom:4rem;"><a href="#modalstem" role="button" data-toggle="modal">Disclaimer</a></div>
+        
                         <!-- Scrollable Modal HTML -->
                         <div id="modalstem" class="modal fade" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
